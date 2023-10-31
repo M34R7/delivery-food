@@ -1,6 +1,6 @@
 # Test task - Delivery Food
 
-Food delivery serves as an evaluative assignment that was assigned to me by Alsodev during the course of my application for the senior front-end position.
+Food delivery serves as an evaluative assignment that was assigned to me by Alsodev during the course of my application for the senior front-end developer position.
 
 ## Getting Started
 
@@ -51,7 +51,9 @@ This will start a development server, and the application will be accessible at 
 
 [Vue](https://vuejs.org/) - JavaScript library for building user interfaces \
 [Vite](https://vitejs.dev/) - Fast development server and build tool for modern web apps \
-[Pinia](https://pinia.vuejs.org/) - Pinia is a lightweight state management tool for Vue. js
+[Pinia](https://pinia.vuejs.org/) - Pinia is a lightweight state management tool for Vue. js \
+[Vue Router](https://router.vuejs.org/) - Vue Router is the official routing library for Vue. js \
+[Axios](https://axios-http.com/) - Axios is a simple promise based HTTP client for the browser and node.js
 
 ## Contact
 
