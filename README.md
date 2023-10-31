@@ -51,7 +51,7 @@ This will start a development server, and the application will be accessible at 
 
 [Vue](https://vuejs.org/) - JavaScript library for building user interfaces \
 [Vite](https://vitejs.dev/) - Fast development server and build tool for modern web apps \
-[Pinia](https://pinia.vuejs.org/) - Pinia is a lightweight state management tool for Vue. js \
+[Pinia](https://pinia.vuejs.org/) - Pinia is a lightweight state management tool for Vue. js
 
 ## Contact
 
