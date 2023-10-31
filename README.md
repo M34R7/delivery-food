@@ -21,13 +21,13 @@ Before you begin, make sure you have the following software installed on your sy
 git clone https://github.com/M34R7/delivery-food.git
 ```
 
-2.Navigate to the project directory:
+2. Navigate to the project directory:
 
 ```
 cd delivery-food
 ```
 
-3.Install the project dependencies:
+3. Install the project dependencies:
 
 ```
 npm install
@@ -49,9 +49,9 @@ This will start a development server, and the application will be accessible at 
 
 ## Built With
 
-[Vue](https://vuejs.org/) - JavaScript library for building user interfaces  
-[Vite](https://vitejs.dev/) - Fast development server and build tool for modern web apps
-[Pinia](https://pinia.vuejs.org/) - Pinia is a lightweight state management tool for Vue. js.
+[Vue](https://vuejs.org/) - JavaScript library for building user interfaces \
+[Vite](https://vitejs.dev/) - Fast development server and build tool for modern web apps \
+[Pinia](https://pinia.vuejs.org/) - Pinia is a lightweight state management tool for Vue. js \
 
 ## Contact
 
