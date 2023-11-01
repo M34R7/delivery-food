@@ -4,7 +4,7 @@ import axios from 'axios'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import Product from 'components/Product.vue'
-import { computed } from '@vue/reactivity'
+import { sortDown, sortUp } from 'helpers/sorting'
 
 //Get current url
 const route = useRoute()
@@ -26,11 +26,6 @@ onMounted(async () => {
     console.log('Ошибка при получыении данных:', error)
   }
 })
-
-const sortUp = computed(() => products.value.sort((a, b) => a.price - b.price))
-const sortDown = computed(() =>
-  products.value.sort((a, b) => b.price - a.price)
-)
 </script>
 <template>
   <main class="main">
@@ -44,8 +39,12 @@ const sortDown = computed(() =>
             <div class="category">{{ restaurant.kitchen }}</div>
           </div>
           <div class="filter">
-            <button @click="products.value = sortDown">Сначала дорогие</button>
-            <button @click="products.value = sortUp">Сначала дешевые</button>
+            <button @click="products.value = sortDown(products)">
+              Сначала дорогие
+            </button>
+            <button @click="products.value = sortUp(products)">
+              Сначала дешевые
+            </button>
           </div>
         </div>
         <div class="cards cards-menu">

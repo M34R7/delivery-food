@@ -1,12 +1,14 @@
 <script setup>
 //Import components
 import axios from 'axios'
-import { onMounted, ref, computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import Restaurant from 'components/Restaurant.vue'
+import { searchRestaurant } from '../helpers/search'
 
 //Initialization state manager
 const partners = ref([])
 const products = ref([])
+const search = ref('')
 
 //Function for request all partners
 onMounted(async () => {
@@ -25,7 +27,13 @@ onMounted(async () => {
 })
 
 //Restaurants matching your search
-const search = ref('')
+const searchPartners = computed(() => {
+  if (search.value.length) {
+    return searchRestaurant(partners.value, search.value)
+  } else {
+    return partners.value
+  }
+})
 </script>
 <template>
   <main class="main">
@@ -53,7 +61,7 @@ const search = ref('')
         </div>
         <div class="cards cards-restaurants">
           <Restaurant
-            v-for="(partner, index) in partners"
+            v-for="(partner, index) in searchPartners"
             :key="index"
             :name="partner.name"
             :timeOfDelivery="partner.time_of_delivery"
