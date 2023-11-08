@@ -1,6 +1,7 @@
 <script setup>
 //Import components
 import { useCartStore } from 'store/cart'
+
 //Initialization state manager
 const store = useCartStore()
 </script>

@@ -2,11 +2,18 @@
 //Import components
 import { ref } from 'vue'
 import Cart from 'components/Cart.vue'
+import Auth from 'components/Auth.vue'
 
 //Import images
 import logo from 'images/icon/logo.svg'
 
+//Auth modal state
 const active = ref(false)
+
+//Function to edit auth modal state
+const setActive = modal => {
+  active.value = modal
+}
 </script>
 <template>
   <div class="container">
@@ -50,53 +57,9 @@ const active = ref(false)
       </div>
     </header>
   </div>
-
-  <div
-    class="modal-auth"
-    v-if="active"
-    @click="active = false"
-  >
-    <div
-      class="modal-dialog modal-dialog-auth"
-      @click="$event.stopPropagation()"
-    >
-      <button
-        class="close-auth"
-        @click="active = false"
-      >
-        &times;
-      </button>
-      <form id="logInForm">
-        <fieldset class="modal-body">
-          <legend class="modal-title">Авторизация</legend>
-          <label class="label-auth">
-            <span>Логин</span>
-            <input
-              id="login"
-              type="text"
-            />
-          </label>
-          <label class="label-auth">
-            <span>Пароль</span>
-            <input
-              id="password"
-              type="password"
-            />
-          </label>
-        </fieldset>
-        <div class="modal-footer">
-          <div class="footer-buttons">
-            <button
-              class="button button-primary button-login"
-              type="submit"
-            >
-              Войти
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
+  <Auth
+    :active="active"
+    @setActive="setActive"
+  />
   <Cart />
 </template>
